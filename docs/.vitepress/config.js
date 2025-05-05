@@ -1,4 +1,4 @@
-const base = "blog";
+const base = "";
 
 export default {
   base,
