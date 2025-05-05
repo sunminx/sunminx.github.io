@@ -56,7 +56,7 @@ jobs:
 
       # 使用 最新的 PNPM
       # 你也可以指定为具体的版本
-      - uses: npm/action-setup@v2
+      - uses: actions/action-setup@v2
         name: Install npm
         with:
           version: latest
@@ -71,7 +71,7 @@ jobs:
       - name: Build blog project
         run: |
           echo ${{ github.workspace }}
-          npm build
+          Ánpm build
 
         # 资源拷贝
       - name: Build with Jekyll
