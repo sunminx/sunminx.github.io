@@ -1,10 +1,10 @@
 import DefaultTheme from 'vitepress/theme'
-import BlogList from './components/BlogList.vue'
+import Home from './Home.vue'
 
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
     // 注册全局组件
-    app.component('BlogList', BlogList)
+    app.component('Home', Home)
   }
 }

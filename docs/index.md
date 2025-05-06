@@ -1,10 +1,7 @@
 ---
 layout: home
 ---
-<script setup>
-  import { data } from '.vitepress/blogList.js'
-</script>
-<BlogList :posts="data" />
+<Home />
 
 <style>
 :root {

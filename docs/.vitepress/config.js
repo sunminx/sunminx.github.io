@@ -9,8 +9,6 @@ export default {
     // 主题级选项
     nav: [
       { text: 'About', link: '/about' },
-      { text: 'Home', link: '/' },
-      { text: 'Blog', link: '/blogs/' }
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/sunminx"}

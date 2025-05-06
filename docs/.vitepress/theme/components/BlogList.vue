@@ -7,7 +7,6 @@
           <span v-for="tag in post.tags" :key="tag" class="tag">{{ tag }}</span>
         </div>
         <p class="excerpt">{{ post.excerpt }}</p>
-        <a :href="post.url" class="read-more">阅读更多 →</a>
       </div>
     </div>
   </template>
@@ -20,20 +19,26 @@
   
   <style scoped>
   .blog-list {
-    max-width: 800px;
+    width: 790px;
     margin: 0 auto;
     padding: 2rem 0;
   }
   
   .blog-post {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--vp-c-divider);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    background: rgba(255, 255, 255, 0.2); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 背景模糊 */
+    border-radius: 10px; /* 可选圆角 */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   }
   
   .blog-post h2 {
     margin: 0 0 0.5rem;
     font-size: 1.5rem;
+    border-top: 0px;
+    padding-top: 12px;
   }
   
   .blog-post h2 a {
@@ -46,7 +51,7 @@
   }
   
   .post-meta {
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     font-size: 0.9rem;
     color: var(--vp-c-text-2);
   }
@@ -61,7 +66,7 @@
   }
   
   .excerpt {
-    margin: 1rem 0;
+    margin: 1rem 0 0 0;
     color: var(--vp-c-text-1);
   }
   
