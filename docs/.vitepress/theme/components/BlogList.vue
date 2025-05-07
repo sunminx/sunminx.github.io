@@ -1,12 +1,12 @@
 <template>
     <div class="blog-list">
       <div v-for="post in posts" :key="post.url" class="blog-post">
-        <h2><a :href="post.url">{{ post.title }}</a></h2>
+        <h2><a :href="post.url">{{ post.frontmatter.title }}</a></h2>
         <div class="post-meta">
-          <span class="date">{{ post.date }}</span>
-          <span v-for="tag in post.tags" :key="tag" class="tag">{{ tag }}</span>
+          <span class="date">{{ post.frontmatter.date.substring(0, 10) }}</span>
+          <span v-for="tag in post.frontmatter.tags" :key="tag" class="tag">{{ tag }}</span>
         </div>
-        <p class="excerpt">{{ post.excerpt }}</p>
+        <p class="excerpt">{{ post.frontmatter.excerpt }}</p>
       </div>
     </div>
   </template>

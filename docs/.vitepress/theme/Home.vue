@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <blog-list :posts="blogs"/>
+    <blog-list :posts="posts"/>
     <Aside />
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 import Aside from "./components/Aside.vue"
 import BlogList from "./components/BlogList.vue"
-import { data } from '../blogList.js'
+import { data as posts } from '../post.data.js'
 
 export default {
     name: "Home",
@@ -18,7 +18,7 @@ export default {
     },
     data: ()=> {
         return {
-            blogs: data
+            posts
         }
     }
 }
