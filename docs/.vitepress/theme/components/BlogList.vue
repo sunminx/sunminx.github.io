@@ -13,7 +13,7 @@
         <div class="read-more">more ..</div>
       </div>
     </div>
-    <div class="pagination">
+    <div v-if="totalPages > 1" class="pagination">
       <button
         class="prev-next"
         :disabled="currentPage === 1"

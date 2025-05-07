@@ -55,10 +55,8 @@ export default {
 
 <style scoped>
 .aside {
-  width: 260px;
-  height: 238px;
-  padding: 32px 0;
-  margin: 0 auto;
+  width: 200px;
+  margin: 0 2rem;
   border: 1px;
 }
 .profile {
@@ -68,15 +66,15 @@ export default {
   align-items: center;
   margin-bottom: 1.2rem;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   background: rgba(255, 255, 255, 0.2); /* 半透明背景 */
   backdrop-filter: blur(10px); /* 背景模糊 */
   border-radius: 10px; /* 可选圆角 */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .favicon {
-  width: 86px; /* 设置宽度 */
-  height: 86px; /* 设置高度，应与宽度相同 */
+  width: 60px; /* 设置宽度 */
+  height: 60px; /* 设置高度，应与宽度相同 */
   border-radius: 50%; /* 关键属性，设置为50%即可形成圆形 */
   object-fit: cover; /* 确保图片比例正确 */
   border: 2px solid #fff; /* 可选：添加白色边框 */
@@ -98,12 +96,13 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.7rem;
 }
 .stats .stats-item .count {
-  font-size: 18px;
+  font-size: 0.9rem;
 }
 .stats .stats-item .label {
+  font-size: 0.7rem;
   color: #86909c;
 }
 .stats .split {
