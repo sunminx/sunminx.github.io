@@ -33,23 +33,22 @@ export default {
   },
   data: () => {
     return {
-        count: 0,
-        countInMonth: 0,
-        countInWeek: 0,
-    }
+      count: 0,
+      countInMonth: 0,
+      countInWeek: 0,
+    };
   },
   created() {
-    const now = new Date()
-    this.count = this.posts.length
-    this.posts.forEach(post => {
-        const date = new Date(post.frontmatter.date)
-        if (now.getMonth() === date.getMonth()) {
-            this.countInMonth += 1
-            if (now.getDate() - date.getDate() < 8)
-                this.countInWeek += 1
-        }
-    })
-  }
+    const now = new Date();
+    this.count = this.posts.length;
+    this.posts.forEach((post) => {
+      const date = new Date(post.frontmatter.date);
+      if (now.getMonth() === date.getMonth()) {
+        this.countInMonth += 1;
+        if (now.getDate() - date.getDate() < 8) this.countInWeek += 1;
+      }
+    });
+  },
 };
 </script>
 
