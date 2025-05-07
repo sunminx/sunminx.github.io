@@ -1,8 +1,8 @@
 ---
-title: es6
-date: 2023-01-01
-excerpt: 文章简介
-tags: [标签1, 标签2]
+title: ES6学习总结
+date: 2025-05-06
+excerpt: 阮一峰的ES6文档的学习总结
+tags: [es6, javascript]
 ---
 
 ## Module
