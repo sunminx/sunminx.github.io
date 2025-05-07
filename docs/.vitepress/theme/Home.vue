@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <blog-list :posts="posts" />
-    <Aside :posts="posts"/>
+    <Aside :posts="posts" />
   </div>
 </template>
 

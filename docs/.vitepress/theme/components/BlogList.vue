@@ -108,11 +108,10 @@ export default {
   margin-bottom: 0.3rem;
   color: var(--vp-c-text-2);
 }
-
 .post-meta .date {
   font-family: "Courier New";
   font-size: 0.9rem;
-  color: #555;
+  color: var(--vp-c-text-1);
 }
 .tag {
   display: inline-block;
@@ -139,8 +138,6 @@ export default {
 }
 .pagination button {
   padding: 5px 10px;
-  border: 1px solid #ddd;
-  background: white;
   cursor: pointer;
 }
 .pagination button.active {
