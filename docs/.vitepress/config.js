@@ -27,6 +27,10 @@ export default {
       prev: "上一篇",
       next: "下一篇",
     },
+    footer: {
+      copyright: `Copyright © ${new Date().getFullYear()} sunminx.github.io`,
+      message: '保留所有权利'
+    }
   },
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）

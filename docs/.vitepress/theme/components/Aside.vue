@@ -5,17 +5,17 @@
       <h5>sunmin</h5>
       <div class="stats">
         <div class="stats-item">
-          <span class="count">0</span>
+          <span class="count">{{ count }}</span>
           <span class="label">博客文章</span>
         </div>
         <div class="split"></div>
         <div class="stats-item">
-          <span class="count">+0</span>
+          <span class="count">+{{ countInMonth }}</span>
           <span class="label">本月更新</span>
         </div>
         <div class="split"></div>
         <div class="stats-item">
-          <span class="count">+0</span>
+          <span class="count">+{{ countInWeek }}</span>
           <span class="label">本周更新</span>
         </div>
       </div>
@@ -26,6 +26,30 @@
 <script>
 export default {
   name: "Aside",
+  props: {
+    posts: {
+      type: Array,
+    },
+  },
+  data: () => {
+    return {
+        count: 0,
+        countInMonth: 0,
+        countInWeek: 0,
+    }
+  },
+  created() {
+    const now = new Date()
+    this.count = this.posts.length
+    this.posts.forEach(post => {
+        const date = new Date(post.frontmatter.date)
+        if (now.getMonth() === date.getMonth()) {
+            this.countInMonth += 1
+            if (now.getDate() - date.getDate() < 8)
+                this.countInWeek += 1
+        }
+    })
+  }
 };
 </script>
 
