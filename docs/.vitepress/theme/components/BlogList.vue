@@ -10,7 +10,7 @@
           </span>
         </div>
         <p class="excerpt">{{ post.frontmatter.excerpt }}</p>
-        <div class="read-more">more ..</div>
+        <div class="read-more"><a :href="post.url">more ..</a></div>
       </div>
     </div>
     <div v-if="totalPages > 1" class="pagination">
