@@ -82,12 +82,14 @@ export default {
 <style scoped>
 .box {
   display: flex;
+  width: 100%;
+  max-width: 790px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .blog-list {
-  width: 50rem;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem 0;
 }
