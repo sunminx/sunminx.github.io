@@ -87,7 +87,7 @@ export default {
   align-items: center;
 }
 .blog-list {
-  width: 790px;
+  width: 50rem;
   margin: 0 auto;
   padding: 2rem 0;
 }
