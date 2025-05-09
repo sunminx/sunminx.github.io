@@ -2,7 +2,7 @@
   <div class="box">
     <div class="blog-list">
       <div v-for="post in currentPosts" :key="post.url" class="blog-post">
-        <h3>{{ post.frontmatter.title }}</h3>
+		  <h3><a :href="post.url" class="title">{{ post.frontmatter.title }}</a></h3>
         <div class="post-meta">
           <span class="date">{{ post.frontmatter.date.substring(0, 10) }}</span>
           <span v-for="tag in post.frontmatter.tags" :key="tag" class="tag">
@@ -10,7 +10,6 @@
           </span>
         </div>
         <p class="excerpt">{{ post.frontmatter.excerpt }}</p>
-        <div class="read-more"><a :href="post.url">more ..</a></div>
       </div>
     </div>
     <div v-if="totalPages > 1" class="pagination">
@@ -106,6 +105,9 @@ export default {
 .blog-post h3 {
   margin: 0;
 }
+.blog-post .title {
+  text-decoration: none;
+}
 .post-meta {
   margin-bottom: 0.3rem;
   color: var(--vp-c-text-2);
@@ -125,14 +127,6 @@ export default {
   font-size: 0.9rem;
   margin: 0 0 0 0;
   color: var(--vp-c-text-1);
-}
-.read-more {
-  font-size: 0.9rem;
-  color: var(--vp-c-brand);
-  text-decoration: none;
-}
-.read-more:hover {
-  text-decoration: underline;
 }
 .pagination {
   display: flex;
